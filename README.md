@@ -5,17 +5,17 @@ Progresive WebApp, para la tienda local de la Cooperativa Nuhu en Querétaro, qu
 Construida sobre Firebase, con Realtime Database, no está implementado ningún framework, y tampoco ninguna librería de JS como Vue / React / Angular. Posiblemente se implemente **Vue más adelante**.
 
 ## Folders
-**C**= Controladores (.js)
-**V**= Vistas
-   **B**=Bloques (ahorita sólo los Modales)
-   **E**=Elementos Reusables (ahorita sólo la card de productos)
-   **M**=Modelos (CSS's)
+>**C**= Controladores (.js)
+>**V**= Vistas
+>>   **B**=Bloques (ahorita sólo los Modales)
+>>   **E**=Elementos Reusables (ahorita sólo la card de productos)
+>>   **M**=Modelos (CSS's)
    
 ## Controladores de Base (Folder "C" ):
-**C.js** = 1ero en cargar, variables y funciones globales (existentes desde proyectos previos, es una librería reusable que ya incluye funciones para FireBase)
-**V.js** = carga al final del HTML, funciones para carga de las vistas, loadCnt() es la crucial, se asegura de cargar tanto el archivo de vista (html en folder V) como el controlador después de haber cargado la Vista y ejecutar su función propia, todos (el html, el js y la función dentro del js) deben tener el mismo nombre
-**S.js** = Funciones para Sesión de Usuarios (logins, logout, y sus hijos)
-**A.js** = Funciones para Sesiones de Usuarios especiales, sólo se carga si entra un usuario con permisos especiales
+>**C.js** = 1ero en cargar, variables y funciones globales (existentes desde proyectos previos, es una librería reusable que ya incluye funciones para FireBase)
+>**V.js** = carga al final del HTML, funciones para carga de las vistas, loadCnt() es la crucial, se asegura de cargar tanto el archivo de vista (html en folder V) como el controlador después de haber cargado la Vista y ejecutar su función propia, todos (el html, el js y la función dentro del js) deben tener el mismo nombre
+>**S.js** = Funciones para Sesión de Usuarios (logins, logout, y sus hijos)
+>**A.js** = Funciones para Sesiones de Usuarios especiales, sólo se carga si entra un usuario con permisos especiales
 
 ## Modelo de Datos
 No hay un archivo en especial, pues la estructura de los datos es JSON (NoSQL) y éstos hablan por sí solos, las funciones para su manejo son las funciones simples de Firebase
