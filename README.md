@@ -30,7 +30,7 @@ No hay un archivo en especial, pues la estructura de los datos es JSON (NoSQL) y
 + https://stackoverflow.com/questions/42616809/sending-automated-emails-from-firebase-through-google-cloud-platform-no-third-p
 
 ## Zona de Pruebas y Credenciales de FTP
-URL: http://nuhu.org.mx/wa
-FTP: ftp://nuhu.org.mx
-USER: wa@nuhu.org.mx
-Pass: fUR8vsJ0fn1e
++ URL: http://nuhu.org.mx/wa
++ FTP: ftp://nuhu.org.mx
++ USER: wa@nuhu.org.mx
++ Pass: fUR8vsJ0fn1e
