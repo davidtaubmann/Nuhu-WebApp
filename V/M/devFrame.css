@@ -1,0 +1,25 @@
+/* CSS Document */
+/**
+ * QLFY File: assets/css/devframe.css
+ * Version : 1.0
+ * author: Quidware.com
+ * descr: Reglas de estilo usadas únicamente para el entorno de desarrollo y pruebas
+ *
+ */
+
+.editing {
+	outline: rgba(255,0,0,0.5) dashed 2px;
+	outline-offset: 3px;
+}
+.editing div{
+	outline: rgba(0,0,255,0.6) dashed 1.5px;
+	outline-offset: 2px;
+}
+.editing div div{
+	outline: rgba(0,0,0,0.7) dashed 1px;
+	outline-offset: 1px;
+}
+.editing div div div{
+	outline: rgba(0,0,255,0.8) dashed 0.5px;
+	outline-offset: 0px;
+}

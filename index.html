@@ -1,0 +1,246 @@
+<!doctype html>
+<!--
+*
+* Proyect:NUHU
+* File: /index.html
+* Version : 0.81
+* author: Quidware.com
+* descr: Archivo de vista principal para la SPA-PWA
+*
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Intercambiamos de manera ecológica y solidaria productos sanos y conocimientos para el bien vivir.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>NUHU</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/favicon.192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="NUHU">
+  <link rel="apple-touch-icon-precomposed" href="images/favicon.192.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/favicon.192.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+
+  <link rel="shortcut icon" href="images/favicon.192.png">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">-->
+
+  <!-- MDL hosted -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
+
+  <!-- FireBase -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-storage.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCKnsef4GxvPXmw7CLElU0Z2jzZlwbyW8w",
+      authDomain: "nuhu-webapp.firebaseapp.com",
+      databaseURL: "https://nuhu-webapp.firebaseio.com",
+      projectId: "nuhu-webapp",
+      storageBucket: "nuhu-webapp.appspot.com",
+      messagingSenderId: "577833441372"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Prop JS (before HTML is rendered) -->
+  <script src="C/C.js"></script>
+
+  <!-- Prop Styles -->
+  <link rel="stylesheet" href="V/M/styles.css">
+
+</head>
+<body>
+  <!-- START OF LAYOUT -->
+  <div class="nuhu-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="nuhu-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+      <!-- MDL Progress Bar with Buffering -->
+      <div id="progBar" class="mdl-progress mdl-js-progress"></div>
+      <script>
+        // Vínculo a Barra de Progreso y activarla
+        var progBar=document.querySelector('#progBar');
+        progBar.addEventListener('mdl-componentupgraded', function() {
+          this.MaterialProgress.setProgress(33);
+          this.MaterialProgress.setBuffer(66);
+        });
+      </script>
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title"></span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="oculto mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search">
+            <label class="mdl-textfield__label" for="search">Buscar...</label>
+          </div>
+        </div>
+        <button class="mdl-button oculto mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+          <li class="mdl-menu__item" onclick="location.href='#registryModal'"><i class="material-icons">person_outline</i>Registrarme</li>
+          <li class="mdl-menu__item" onclick="location.href='#signinModal'"><i class="material-icons">account_circle</i>Iniciar Sesión</li>
+          <a href="javascript:loadCnt('nuhu')"><li class="mdl-menu__item"><i class="material-icons">info</i>Sobre NUHU</li></a>
+          <!--a href="#tc"><li class="mdl-menu__item"><i class="material-icons">class</i>Términos y Condiciones</li></a>
+          <a href="#ap"><li class="mdl-menu__item"><i class="material-icons">spellcheck</i>Aviso de Privacidad</li></a>
+          <a href="#sos"><li class="mdl-menu__item"><i class="material-icons">help_outline</i>Ayuda</li></a-->
+          <a href="javascript:loadCnt('contacto')"><li class="mdl-menu__item"><i class="material-icons">forum</i>Contacto</li></a>
+        </ul>
+      </div>
+    </header>
+    <div class="nuhu-drawer drawer-oculto mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <header class="nuhu-drawer-header">
+        <img id="user-avatar" src="images/favicon.192.png" class="nuhu-avatar">
+        <div class="nuhu-avatar-dropdown">
+          <span id="user-email">pruebas@nuhu.org.mx</span>
+          <div class="mdl-layout-spacer"></div>
+          <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">arrow_drop_down</i>
+            <span class="visuallyhidden">Accounts</span>
+          </button>
+          <ul id="user-menu" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+            <li class="mdl-menu__item" onclick="logOut()"><i class="material-icons">clear</i>Cerrar Sesión</li>
+          </ul>
+        </div>
+      </header>
+      <nav class="nuhu-navigation mdl-navigation mdl-color--blue-grey-800">
+        En su versión de explorador no se puede navegar por éste sitio.
+      </nav>
+    </div>
+
+    <!-- START OF MAIN CONTENT AREA -->
+    <main class="mdl-layout__content mdl-color--grey-100">
+      <!-- START OF CONTENT CONTAINER -->
+      <div id="nuhu-content" ondblclick="if(tst_css)triggererClassToggle('editing')">
+        <noscript>
+          <center><p></p><p>Debe tener activado JavaScript para poder usar éste servicio.</p></center>
+        </noscript>
+
+      </div>
+      <!-- END OF CONTENT CONTAINER -->
+
+      <!-- START OF FOOTER -->
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <!--div class="mdl-logo">
+          More Information</div-->
+          <ul class="mdl-mini-footer__link-list">
+            <!--li><a href="#tc">Términos y Condiciones</a></li>
+            <li><a href="#ap">Aviso de Privacidad</a></li>
+            <li><a href="#sos">Ayuda</a></li-->
+            <li><a href="javascript:loadCnt('nuhu')">Sobre Nuhu</a> | <a href="javascript:loadCnt('contacto')">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="mdl-mini-footer__right-section">
+          <button class="mdl-mini-footer__social-btn" onclick="javascript:loadCnt('inicio')"><i class="material-icons" role="presentation">home</i></button>
+          <button class="mdl-mini-footer__social-btn" onclick="javascript:loadCnt('productos')"><i class="material-icons" role="presentation">store</i></button>
+          <button class="mdl-mini-footer__social-btn" onclick="window.location.reload(true)" OLDonclick="location.href='./'"><i class="material-icons" role="presentation">replay</i></button>
+        </div>
+      </footer>
+      <!-- END OF FOOTER -->
+
+    </main>
+    <!-- END OF MAIN CONTENT AREA -->
+
+  </div>
+  <!--a href="#" OLDtarget="_blank" id="ayuda" OLDclass="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect"><i class="material-icons">live_help</i></a-->
+
+  <!-- END OF LAYOUT -->
+
+  <!-- START OF EXTRA ELEMENTS -->
+
+  <!--Modales Permanentes-->
+  <div id="modalesPerms">
+    <!--Modal Terminos-->
+		<div id="tc" class="modalterms fade over-mas">
+			<div>
+				<a class="close" title="Close" href="#close"><i class="material-icons">close</i></a>
+				<!--Body-->
+				<div class="modal-body row flex-center">
+					<div id="tcCNT" class="col-sm-12 gray3">
+            <h2>TÉRMINOS Y CONDICIONES</h2>
+            <h3><b>! SITIO EN CONSTRUCCIÓN !&nbsp;</b></h3>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <h3><b>! SITIO EN CONSTRUCCIÓN !</b></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/Modal Terminos-->
+
+		<!--Modal Aviso-->
+		<div id="ap" class="modalterms fade over-mas">
+			<div>
+				<a class="close" title="Close" href="#close"><i class="material-icons">close</i></a>
+				<!--Body-->
+				<div class="modal-body flex-center">
+					<div id="apCNT" class="gray3">
+            <h2>Aviso de Privacidad</h2>
+            <h3><b>! SITIO EN CONSTRUCCIÓN !&nbsp;</b></h3>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif; text-align: justify;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif; text-align: justify;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif; text-align: justify;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif; text-align: justify;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <p style="letter-spacing: normal; font-family: Roboto, Helvetica, sans-serif; text-align: justify;">ÉSTE ES UN SITIO EN CONSTRUCCIÓN BAJO EL FORMATO DE WEBAPP PROGRESIVA DESARROLLADO SOBRE FIREBASE (DE GOOGLE). POR EL MOMENTO SE RECOMIENDA NO USAR DATOS PERSONALES REALES.</p>
+            <h3><b>! SITIO EN CONSTRUCCIÓN !</b></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/Modal Aviso-->
+
+  </div>
+  <!--/Modales Permanentes-->
+
+  <!--Modales Sesión-->
+  <div id="modalesS"></div>
+  <!--/Modales Sesión-->
+
+  <!--Modales de Vista-->
+  <div id="modalesV"></div>
+  <!--/Modales de Vista-->
+
+  <!--Botón Inferior Derecho-->
+  <div id="botInfDer"></div>
+  <!--/Botón Inferior Derecho-->
+
+  <!--SnackBar-->
+  <div id="snackBar" aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button type="button" class="mdl-snackbar__action"></button>
+  </div>
+  <!--SnackBar-->
+
+  <!-- END OF EXTRA ELEMENTS -->
+
+  <!-- CLOSE FILE -->
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  <!-- Prop JS (once HTML is rendered) -->
+  <script src="C/V.js"></script>
+  <script src="C/S.js"></script>
+
+</body>
+</html>

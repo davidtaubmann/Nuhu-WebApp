@@ -1,0 +1,194 @@
+/**
+ *
+ * Proyect:NUHU
+ * File: V/M/prod-card.css
+ * Version : 0.81
+ * author: Quidware.com
+ * descr: CSS NUHU MDL Card
+ *
+ */
+
+/* -- Dyanmic Elements -- */
+.NUHU-card-wide{
+	/*		-webkit-scroll-snap-coordinate: 50% 50%;*/
+	/*		scroll-snap-coordinate: 50% 50%;*/
+}
+.NUHU-card-wide.MapOver .mdl-card__actions {
+	background: #B2D8E4;
+}
+#FT .NUHU-card-wide{
+	height:360px;
+	margin-bottom: 16px;
+}
+#FT .NUHU-card-wide .mdl-card__media{
+	height:285px;
+}
+#FT .NUHU-card-wide .slide{
+	cursor: pointer;
+}
+.NUHU-card-wide  .mdl-card__title {
+	color: #fff;
+	height: 176px;
+	/* background: url('fondo05.jpg') center / cover; */
+}
+/* .NUHU-card-wide > .mdl-card__menu, .ico-img > .mdl-card__menu { */
+.mdl-card__menu {
+	color: #fff;
+	width: calc(100% - 20px);
+	right: 10px;
+  top: 10px;
+	z-index:4;
+	text-align: right;
+}
+/* .NUHU-card-wide > .mdl-card__menu .mdl-button, .ico-img > .mdl-card__menu .mdl-button{ */
+.mdl-card__menu .mdl-button, #fotos .mdl-button{
+	background-color: white;
+	color: #21afc7;
+}
+.NUHU-card-wide  .mdl-card__supporting-text, .NUHU-card-wide .mdl-card__title-text, .NUHU-card-wide  .mdl-card__title {
+	display:none;
+}
+.NUHU-card-wide  .mdl-card__supporting-text{
+	font-size: 16px;
+	line-height: 18px;
+	width: initial;
+	padding: 7px;
+	height: 54px;
+}
+.NUHU-card-wide .mdl-card__media{
+	background-color: white;
+	/* background-image: url(../../images/favicon.192.png); */
+  background-repeat: no-repeat;
+	height:190px;
+	z-index:2;
+	transition: transform 0.4s ease;
+	position: inherit;
+}
+.NUHU-card-wide .mdl-card__actions{
+	background-color: white;
+	padding: 4px 16px;
+	height: 65px;
+	z-index:3;
+	transition: transform 0.4s ease;
+	align-items: center;
+  display: grid;
+  overflow-y: auto;
+}
+.NUHU-card-wide .mdl-card__actions table{
+	border: none;
+	width: 100%;
+}
+.NUHU-card-wide .mdl-card__actions table td.actions{
+	white-space: nowrap;
+}
+.NUHU-card-wide .evaluation{
+	font-size: 11px;
+	letter-spacing: 0px;
+	white-space: nowrap;
+	line-height: 24px;
+}
+.NUHU-card-wide .fav {
+	display:none;
+}
+.NUHU-card-wide label.text-submenu {
+	cursor: pointer;
+}
+.NUHU-card-wide .fav + .icon-favoritos1{
+	cursor: pointer;
+}
+.NUHU-card-wide .fav + .icon-favoritos1:hover:before{
+	/* content: "\e99b"; */
+	/* color:#ff7777; */
+	/* color: maroon; */
+	font-weight: bold;
+}
+.NUHU-card-wide .fav:checked + .icon-favoritos1:before{
+	content: "\e99b";
+	color:inherit;
+}
+.NUHU-card-wide .price{
+	color: #404040;
+	font-size: 20px;
+	font-weight:bold;
+	letter-spacing: normal;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.NUHU-card-wide .actions{
+	vertical-align: middle;
+	text-align: right;
+}
+.NUHU-card-wide .NUHU-card-actFase2 {
+	display:none;
+}
+.NUHU-card-wide .NUHU-card-actFase2 + .mdl-card__media + .fase2{
+	opacity: 0.9;
+	position: absolute;
+	width: 100%;
+	height: 190px;
+	background-color: rgba(255,255,255,0.8);
+	box-sizing: border-box;
+	z-index:2;
+	padding: 10px;
+	/**/
+	bottom: 0;
+	transform: translateY(190px);
+	/*/
+	bottom: -95px;
+	transform: scaleY(0.1);
+	/**/
+	transition: transform 0.4s ease;
+	overflow-y: auto;
+}
+.NUHU-card-wide .NUHU-card-actFase2:checked + .mdl-card__media {
+	transform: translateY(65px);
+}
+.NUHU-card-wide .NUHU-card-actFase2:checked + .mdl-card__media + .fase2{
+	/*/
+	transform: scaleY(1);
+	transform: translateY(-95px);
+	/**/
+	transform: translateY(0);
+}
+.NUHU-card-wide .NUHU-card-actFase2:checked + .mdl-card__media + .fase2 + .mdl-card__actions {
+	transform: translateY(-190px);
+}
+.NUHU-card-wide .NUHU-card-actFase2 + .mdl-card__media + .fase2 + .mdl-card__actions .AF2 {
+	cursor: pointer;
+	visibility: visible;
+	display: inherit;
+
+}
+.NUHU-card-wide .NUHU-card-actFase2 + .mdl-card__media + .fase2 + .mdl-card__actions .AF2:hover i{
+	color: #c3c3c3;
+}
+.NUHU-card-wide .NUHU-card-actFase2:checked + .mdl-card__media + .fase2 + .mdl-card__actions .AF2 {
+	visibility: hidden;
+	display: none;
+}
+.NUHU-card-wide .NUHU-card-actFase2 + .mdl-card__media + .fase2 + .mdl-card__actions .cerrarF2 {
+	visibility: hidden;
+	display: none;
+}
+.NUHU-card-wide .NUHU-card-actFase2:checked + .mdl-card__media + .fase2 + .mdl-card__actions .cerrarF2 {
+	visibility: visible;
+	display: inherit;
+}
+.NUHU-card-wide .NUHU-card-actFase2:checked + .mdl-card__media + .fase2 + .mdl-card__actions .dropdown4:hover .dropdown-content4 {
+	top:27px;
+}
+
+select.NMR {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+		padding: 0 8px;
+    border: none;
+    width: auto;
+    max-width: 54px;
+		border-radius: 20px;
+}
+select.NMR::-ms-expand {
+    display: none;
+}

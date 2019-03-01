@@ -1,0 +1,457 @@
+/**
+ *
+ * Proyect:NUHU
+ * File: V/M/styles.css
+ * Version : 0.81
+ * author: Quidware.com
+ * descr: CSS Globales
+ *
+ */
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+h1,h2,h3,h4,h5 {
+  padding: 0 8px !important;
+  margin: 10px 0 !important;
+}
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 220%;
+}
+h3 {
+    font-size: 190%;
+}
+h4 {
+    font-size: 160%;
+}
+h4 {
+    font-size: 130%;
+}
+i.material-icons {
+    vertical-align: middle;
+}
+.nuhu-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+.nuhu-layout .mdl-layout__header .mdl-layout__drawer-button {
+  color: rgba(0, 0, 0, 0.54);
+}
+.mdl-layout__drawer .avatar {
+  margin-bottom: 16px;
+}
+.nuhu-drawer {
+  border: none;
+}
+/* iOS Safari specific workaround */
+.nuhu-drawer-header .mdl-menu__container {
+  z-index: -1;
+}
+.nuhu-drawer .nuhu-navigation {
+  z-index: -2;
+}
+/* END iOS Safari specific workaround */
+.nuhu-drawer .mdl-menu .mdl-menu__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nuhu-drawer-header {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 16px;
+  height: 151px;
+}
+.nuhu-avatar-dropdown {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.nuhu-navigation {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.nuhu-layout .nuhu-navigation .mdl-navigation__link, .nuhu-navigation .mdl-button {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+}
+.nuhu-layout .nuhu-navigation .mdl-navigation__link:hover, .nuhu-navigation .mdl-button:hover {
+  background-color: rgb(255,64,129);
+  color: #37474F;
+}
+.nuhu-layout .nuhu-navigation .mdl-navigation__link:hover .material-icons, .nuhu-navigation .mdl-button:hover .material-icons{
+  color: #37474F !important;
+}
+.nuhu-navigation .mdl-navigation__link .material-icons, .nuhu-navigation .mdl-button .material-icons{
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
+}
+.mdl-layout__drawer .nuhu-navigation .mdl-button {
+    display: block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 16px 40px;
+    text-decoration: none;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    opacity: .87;
+    width: 100%;
+    height: 56px;
+    /* text-transform: none; */
+}
+.nuhu-content {
+  max-width: 1080px;
+  margin: auto;
+}
+.mdl-mini-footer {
+    margin-top: 15px;
+}
+
+/*######## NUHU SPEC ##########*/
+/*############################*/
+.mdl-grid {
+    padding: 0 !important;
+}
+.oculto{
+  display: none;
+}
+.drawer-oculto{
+  -webkit-transform: translateX(-240px) !important;
+  transform: translateX(-240px) !important;
+}
+.mdl-layout__header-row{
+  background: url(../../images/logoTextoConIcono.png) no-repeat center center;
+  background: url(../../images/logoTextoConIcono.svg) no-repeat center center,
+    linear-gradient(transparent, transparent);
+  background-size: 250px;
+}
+.mdl-textfield--expandable{
+  background-color: whitesmoke;
+  height: 55px;
+  margin-top: -10px;
+}
+.mdl-textfield {
+  margin: 0 0 -10px 0;
+}
+.mdl-textfield__error {
+  margin-top: 0px;
+}
+
+#botInfDer {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  z-index: 8;
+}
+.mdl-snackbar{
+  z-index: 10;
+}
+.mdl-layout__header-row{
+  padding-right: 22px;
+}
+.mdl-menu__item .material-icons{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.mdl-layout-spacer + .material-icons{
+  margin-left: 5px;
+  margin-right: 0;
+}
+.mdl-layout__content>#nuhu-content{
+  max-width: 1024px;
+  margin: auto;
+}
+.mdl-grid.nuhu-productos .mdl-cell{
+  min-height: 200px;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.mdl-menu__item a {
+    color: rgba(0,0,0,.87);
+}
+
+/* -- Barra Progreso -- */
+.mdl-progress {
+	width: 100%;
+	transition: opacity ease-out 1s;
+}
+.mdl-progress div {
+	height: 4px;
+}
+/**/
+.mdl-progress>.progressbar{
+	background-color: rgb(64,255,110);
+}
+.mdl-progress>.bufferbar{
+  background-image: linear-gradient(to right,rgba(255,110,64,.7),rgba(255,110,64,.7)),linear-gradient(to right,rgb(255,110,64),rgb(255,110,64));
+}
+.mdl-progress:not(.mdl-progress--indeterminate):not(.mdl-progress--indeterminate)>.auxbar, .mdl-progress:not(.mdl-progress__indeterminate):not(.mdl-progress__indeterminate)>.auxbar{
+  background-image: linear-gradient(to right,rgba(255,110,64,.7),rgba(255,110,64,.7)),linear-gradient(to right,rgb(255,110,64),rgb(255,110,64));
+}
+/**/
+
+/* -- Modales -- */
+.modalDialog, .modalterms, .fade {	/* , #mas , #fotos */
+	position: fixed;
+	font-family: 'latomedium', sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 9;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target, .modalterms:target, .fade:target {	/* , #mas:target, #fotos:target */
+	opacity: 1;
+	pointer-events: auto;
+}
+.modalterms:target, .fade:target {
+  overflow: hidden;
+  max-height: 100%;
+}
+.modalDialog:target {
+  overflow: auto;
+}
+.modalDialog .close, .modalterms .close {
+	color: #e0e0e0;
+	font-weight: bold;
+  text-decoration: none;
+	z-index: 1;
+	opacity: 1 !important;
+  display: block;
+  background-color: #37474F;
+  /*/
+  position: absolute;
+	right: 3px;
+	top: 3px;
+  line-height: 25px;
+	font-size: 34px;
+  border-radius: 15px;
+  padding: 3px 5px;
+  /*/
+	position: fixed;
+	right: 10px;
+	top: 10px;
+  line-height: 25px;
+	font-size: 34px;
+  border-radius: 15px;
+  padding: 3px 5px;
+  /**/
+}
+.modalDialog > div, .modalterms > div {
+	position: relative;
+  box-sizing: border-box;
+	padding: 5px 16px 13px 16px;
+	border-radius: 10px;
+	background: #fff;
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+.modalDialog > div {
+	min-width: 304px;
+  width: 304px;
+  max-width: 95%;
+  margin: 70px auto 2%;
+  overflow: hidden;
+}
+.modalterms > div {
+	width: 60%;
+  max-height: 88%;
+  margin: 2% auto 0;
+	padding: 2.5em;
+	padding: 40px;
+  overflow-x: hidden;
+	overflow-y: auto;
+}
+.modalterms p {
+  /* text-align: justify; */
+}
+
+/* -- Modal de Inicio de Sesión -- */
+#signinModal .btn, #registryModal .btn, #askPwdRestModal .btn, #sentPwdRestModal .btn, #verifyModal .btn {
+    line-height: 31px;
+    position: relative;
+    padding: 5px 22px;
+    border: 0;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none !important;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
+    width: 272px;
+    height: 40px;
+    font-size: 12px !important;
+}
+.btn-primary-facebook {
+  background: #004c98 !important;
+  color: #ffffff
+}
+.btn-primary-facebook:hover, .btn-primary-facebook:focus {
+  background-color: #2177ce !important;
+}
+.btn-primary-facebook.active {
+  background-color: #004c98 !important;
+}
+.btn-primary-google {
+  background: #40b252 !important;
+  color: #ffffff
+}
+.btn-primary-google:hover, .btn-primary-google:focus {
+  background-color: #48dc5f !important;
+}
+.btn-primary-google.active {
+  background-color: #40b252 !important;
+}
+
+/* ######- Responsividad  -######## SMALL - LARGE - DESKTOPS (va primero) */
+/*########################### */
+/* -- MDL-Small (with Drawer CLOSED, Teams with MDL-Large) -- */
+@media (max-width: 1024px){
+  .mdl-layout__header-row { padding-right: 6px; }
+  .mdl-layout__drawer .mdl-navigation .mdl-button { padding: 16px; }
+	.mdl-progress { top: 56px; }
+	.rightPanel{ width: calc(66.6666666667% + 16px); }
+}
+/* -- MDL-Large (with Drawer OPEN, Teams with MDL-Small) -- */
+@media (min-width: 1025px){
+	.mdl-progress { top: 64px; }
+	.rightPanel{ width: calc(66.6666666667% + 16px); }
+}
+
+/* #####- Responsividad  -##### Dispositivos (va segundo) */
+/*############################# */
+/* -- MDL-Phone -- */
+@media (max-width: 479px){
+  .cntPanels{ position: inherit; }
+	.leftPanel{	height: auto; width: 100%; }
+	.rightPanel{ width: 100% }
+  .modalterms > div{
+		min-width: calc(100% - 20px) !important;
+		padding: 8px !important;
+	}
+  .mdl-mini-footer--link-list, .mdl-mini-footer__link-list {
+    display: block;
+  }
+}
+/* -- MDL-Tablet -- */
+@media (min-width: 480px) and (max-width: 839px){
+	.rightPanel{ width: 62.5% }
+  .modalterms > div{
+    min-width: 430px;
+    width: 85%;
+    max-width: calc(100% - 4px);
+		padding: 4vmin !important;
+	}
+}
+/* -- MDL-Desktop -- */
+@media (min-width: 840px){
+	.rightPanel{ width: calc(66.6666666667% + 16px); }
+}
+
+/* -- QUIDWARE - Phones in Horizontal Scope -- */
+@media (max-height: 479px){
+  .modalDialog > div {
+    margin-top:0;
+  }
+}
+
+/* -- Nuevos -- */
+.page-content {
+  padding: 0 10px;
+}
+#prodsMenu li {
+  font-size: 13px;
+  line-height: 40px;
+  height: 40px;
+}
+#titBar, #botBar{
+  background-color: #5a7b13;
+  color:white;
+  padding: 0 8px;
+  margin: 8px 0;
+  line-height: 40px;
+}
+#titBar .material-icons{
+  vertical-align: text-bottom;
+}
+#titBar h2{
+  font-size:24px;
+  display: inline;
+}
+#catbtn{
+  vertical-align: text-bottom;
+  margin: -4px 0;
+}
+#botBar #catRetro{
+  float: left;
+}
+#botBar #catProgr{
+  float: right;
+}
+.mdl-cell.monto{
+  text-align:center;
+  background:#dedede;
+  margin: 0;
+  padding: 8px;
+}
+#nuhu-total{
+  border-top: double gray 4px;
+  text-align: right;
+}
+.mdl-menu a{
+  text-decoration: none;
+}

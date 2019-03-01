@@ -1,0 +1,102 @@
+<!--
+* Proyect:NUHU
+* File: V/B/modals_d.html
+* Version : 0.6
+* author : Quidware.com
+* descr: Bloque para sesiones de desconectados
+-->
+<!-- Modal Registro -->
+<div id="registryModal" class="modalDialog fade">
+	<div>
+		<a class="close" title="Cerrar" href="#close"><i class="material-icons">close</i></a>
+		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn btn-primary-facebook" id="btn-fb-log2"><img src="http://quidware.com/firmas/icons-png-w/facebook-f.png"> Registrarme con facebook
+		</button>
+		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn btn-primary-google" id="btn-gg-log2"><img src="http://quidware.com/firmas/icons-png-w/google.png"> Registrarme con Google</button>
+		<input class="mdl-textfield__input" type="text" id="RgName" placeholder="Nombre">
+		<input class="mdl-textfield__input" type="text" id="RgLname" placeholder="Apellido">
+		<input class="mdl-textfield__input" type="email" id="RgEmail" placeholder="Correo electrónico">
+		<input class="mdl-textfield__input" type="password" id="RgPass" placeholder="Contraseña">
+		<input class="mdl-textfield__input" type="number" id="RgPostal" placeholder="Código Postal" max="99999" maxlength="5">
+		<input class="mdl-textfield__input" type="text" id="RgMov" placeholder="Móvil">
+		<p>Al registrarte, estás aceptando los <a href="#tc">Términos y Condiciones</a> del servicio, así como el <a href="#ap">Aviso de privacidad</a> de NUHU.</p>
+		<div class="mdl-typography--text-center">
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="btn-Registro">REGÍSTRATE</button>
+		</div>
+
+		<div class="mdl-typography--text-right" style="padding-top: 20px;">
+			<p>¿Ya eres miembro de NUHU?</br><a href="#signinModal">Iniciar sesión</a></p>
+		</div>
+	</div>
+</div>
+<!--/Modal Registro-->
+
+<!--Modal Inicio Sesion Email-->
+<div id="signinModal" class="modalDialog fade">
+	<div>
+		<a class="close" title="Cerrar" href="#close"><i class="material-icons">close</i></a>
+		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn btn-primary-facebook" id="btn-fb-log"><img src="http://quidware.com/firmas/icons-png-w/facebook-f.png"> Iniciar sesión con facebook
+		</button>
+		<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent btn btn-primary-google" id="btn-gg-log"><img src="http://quidware.com/firmas/icons-png-w/google.png"> Iniciar sesión con Google</p>
+		</button>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="email" id="email">
+			<label class="mdl-textfield__label" for="email">Correo electrónico</label>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="password" id="password">
+			<label class="mdl-textfield__label" for="password">Contraseña</label>
+		</div>
+		<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="checkbox11">
+			<input type="checkbox" id="checkbox11" class="mdl-switch__input" checked>
+			<span class="mdl-switch__label">Recordarme</span>
+		</label>
+		<div class="text-left" style="padding-top: 20px;">
+			<p><a href="#askPwdRestModal" onClick="askPwdRestModal()">¿Has olvidado tu contraseña?</a></p>
+		</div>
+		<div class="mdl-typography--text-center">
+			<button id="btn-LogEmail" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+				INICIAR SESIÓN
+			</button>
+		</div>
+
+		<div class="mdl-typography--text-right" style="padding-top: 20px;">
+			<p>¿No tienes cuenta?</br><a href="#registryModal">Regístrate</a></p>
+		</div>
+	</div>
+</div>
+<!-- /Modal Inicio Sesion Email -->
+
+<!-- Modal Solicitar Reseteo de Contraseña por Correo-->
+<div id="askPwdRestModal" class="modalDialog fade">
+	<div>
+		<a class="close" title="Cerrar" href="#close"><i class="material-icons">close</i></a>
+		<h3>REESTABLECER CONTRASEÑA</h3>
+		<p>Por favor, verifica que tu correo electrónico esté bien escrito. Se te enviará un correo con una liga única para reestablecer tu contraseña.</a></p>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="email" id="RstEmail">
+			<label class="mdl-textfield__label" for="email">Correo electrónico</label>
+		</div>
+		<div class="mdl-typography--text-center" style="padding-top: 20px;">
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="btn-askPwdRest" onClick="askPwdRest()">Reestablecer contraseña</button>
+		</div>
+	</div>
+</div>
+<!--	/Modal Solicitar Reseteo de Contraseña por Correo-->
+
+<!-- Modal Se envió liga de Reseteo de Contraseña por Correo-->
+<div id="sentPwdRestModal" class="modalDialog fade">
+	<div>
+		<a class="close" title="Cerrar" href="#close"><i class="material-icons">close</i></a>
+		<div>
+			<h3>LIGA ENVIADA</h3>
+			<div class="text-left">
+				<p>Por favor, abre el correo electrónico que se envió a tu dirección mencionada y haz clic en el enlace que viene incluído.</p>
+				<p>Si no lo encuentras, puedes <a href="#askPwdRestModal">solicitar una nuevaconfirmación</a> por correo electrónico o <a href="#registryModal">registrarte con otro correo</a>.</p>
+			</div>
+			<div class="mdl-typography--text-center disabled-email">
+				<div class="btn-lg gray1" id="shwRstEmail"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--	/Modal Se envió liga de Reseteo de Contraseña por Correo-->
