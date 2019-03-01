@@ -5,11 +5,11 @@ Progresive WebApp, para la tienda local de la Cooperativa Nuhu en Querétaro, qu
 Construida sobre Firebase, con Realtime Database, no está implementado ningún framework, y tampoco ninguna librería de JS como Vue / React / Angular. Posiblemente se implemente **Vue más adelante**.
 
 ## Folders
-+ **C**= Controladores (.js)
-+ **V**= Vistas
-   + **B**=Bloques (ahorita sólo los Modales)
-   + **E**=Elementos Reusables (ahorita sólo la card de productos)
-   + **M**=Modelos (CSS's)
++ **C** = Controladores (.js)
++ **V** = Vistas (.html)
+   + **B** = Bloques (.html y .js , ahorita sólo los Modales)
+   + **E** = Elementos Reusables (.js , ahorita sólo la card de productos)
+   + **M** = Modelos (.css)
    
 ## Controladores de Base (Folder "C" ):
 + **C.js** = 1ero en cargar, variables y funciones globales (existentes desde proyectos previos, es una librería reusable que ya incluye funciones para FireBase)
