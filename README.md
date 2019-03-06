@@ -10,7 +10,7 @@ Construida sobre Firebase, con Realtime Database, no está implementado ningún 
    + **B** = Bloques (.html y .js , ahorita sólo los Modales)
    + **E** = Elementos Reusables (.js , ahorita sólo la card de productos)
    + **M** = Modelos (.css)
-   
+
 ## Controladores de Base (Folder "C" ):
 + **C.js** = 1ero en cargar, variables y funciones globales (existentes desde proyectos previos, es una librería reusable que ya incluye funciones para FireBase)
 + **V.js** = carga al final del HTML, funciones para carga de las vistas, loadCnt() es la crucial, se asegura de cargar tanto el archivo de vista (html en folder V) como el controlador después de haber cargado la Vista y ejecutar su función propia, todos (el html, el js y la función dentro del js) deben tener el mismo nombre
@@ -26,8 +26,11 @@ No hay un archivo en especial, pues la estructura de los datos es JSON (NoSQL) y
 
 ## TIPs para uso de Firebase
 + Mantén actualizadas las versiones para evitar problemas difíciles de encontrar (script y CLI)
-+ https://stackoverflow.com/questions/41517682/onchild-added-vs-oncechild-added
-+ https://stackoverflow.com/questions/42616809/sending-automated-emails-from-firebase-through-google-cloud-platform-no-third-p
++ Si eres nuevo con FireBase deberías comenzar con éstos cursos y ligas:
+  + https://codelabs.developers.google.com/codelabs/firestore-web/index.html?index=..%2F..index
+  + https://codelabs.developers.google.com/codelabs/firebase-web/index.html?index=..%2F..index
+  + https://stackoverflow.com/questions/41517682/onchild-added-vs-oncechild-added
+  + https://stackoverflow.com/questions/42616809/sending-automated-emails-from-firebase-through-google-cloud-platform-no-third-p
 
 ## Zona de Pruebas y Credenciales de FTP
 + URL: http://nuhu.org.mx/wa
