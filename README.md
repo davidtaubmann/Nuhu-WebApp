@@ -1,5 +1,18 @@
 # Nuhu-WebApp
-Progresive WebApp, para la tienda local de la Cooperativa Nuhu en Querétaro, que distribuye productos orgánicos de la región creada por pequeños productores, sin intermediarios, recolectada y distribuida una vez por semana.
+WebApp Progresiva, para la tienda local de la Cooperativa Nuhu en Querétaro, que distribuye productos orgánicos de la región creada por pequeños productores, sin intermediarios, recolectada y distribuida una vez por semana.
+
+## Estado del proyecto
+Nuestra organización existe desde principios de 2018, distribuyendo productos orgánicos entre los productores regionales y las familias citadinas, sin intermediarios.
+La metodología de trabajo funciona hasta el momento con herramientas muy básicas: una forma de Google Docs para los pedidos y hojas de excel para la recolección, armado y entrega.
+
+### Problemática
+El problema principal es que la forma de Google (abierta de miércoles a viernes, el corte se hace los sábados temprano y el pedido a proveedores el sábado a medio día) ya es demasiado grande por la cantidad de productos que se manejan y genera ya muchos problemas para la confirmación del cliente que está haciendo el pedido, cosa que incluso espanta a los clientes y los desmotiva de volver a usar el servicio.
+
+### Objetivo
+La urgencia es reemplazar esa [forma de Google](http://pedidos.nuhu.org.mx) por la primera etapa de ésta WebApp, para que los clientes puedan hacer sus pedidos semanales de forma ágil y confiable estructuralmente, y de ahí generar el archivo CSV para importar en Excel el concentrado de pedidos confirmados, para continuar con el resto del proceso actual.
+
+## RoadMap
+Acabando ésta 1era etapa (pedidos semanales) y después de probarla bien con el equipo, ya podemos pasarnos al resto de los casos de uso (proveedores, colaboradores, admins, etc) señalados en el [mapa mental](https://www.mindmeister.com/1080714193).
 
 ## Framework
 Construida sobre Firebase, con Realtime Database, no está implementado ningún framework, y tampoco ninguna librería de JS como Vue / React / Angular. Posiblemente se implemente **Vue más adelante**.
