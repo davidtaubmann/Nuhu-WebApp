@@ -2,7 +2,7 @@
 WebApp Progresiva, para la tienda local de la Cooperativa Nuhu en Querétaro, que distribuye productos orgánicos de la región creada por pequeños productores, sin intermediarios, recolectada y distribuida una vez por semana.
 
 ## Estado del proyecto
-Nuestra organización existe desde principios de 2018, distribuyendo productos orgánicos entre los productores regionales y las familias citadinas, sin intermediarios.
+Nuestra organización existe desde mediados de 2016, distribuyendo productos orgánicos entre los productores regionales y las familias citadinas, sin intermediarios.
 La metodología de trabajo funciona hasta el momento con herramientas muy básicas: una forma de Google Docs para los pedidos y hojas de excel para la recolección, armado y entrega.
 
 ### Problemática
